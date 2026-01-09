@@ -1,0 +1,11 @@
+export ARCHS = arm64 arm64e
+export TARGET = iphone:clang:latest:14.0
+INSTALL_TARGET_PROCESSES = SpringBoard
+
+include $(THEOS)/makefiles/common.mk
+
+TWEAK_NAME = M1StoreWelcome
+M1StoreWelcome_FILES = Tweak.x
+M1StoreWelcome_FRAMEWORKS = UIKit
+
+include $(THEOS_MAKE_PATH)/tweak.mk
